@@ -3,16 +3,17 @@ class Solution {
         int c=0,n=arr.length;
         for(int i=0;i<n;i++){
             for(int j=i+1;j<n;j++){
-                int a=0;
-                for(int k=i;k<j;k++){
-                    a=a^arr[k];
-                }
-                int b=0;
                 for(int k=j;k<n;k++){
-                    b=b^arr[k];
-                    if(a==b){
-                        c++;
-                    }
+                    int a=0,b=0;
+                for(int x=i;x<j;x++){
+                    a=a^arr[x];
+                }
+                for(int x=j;x<=k;x++){
+                    b=b^arr[x];
+                }
+                if(a==b){
+                    c++;
+                }
                 }
             }
         }

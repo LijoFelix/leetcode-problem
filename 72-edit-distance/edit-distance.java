@@ -18,10 +18,10 @@ class Solution {
                     dp[i][j] = dp[i - 1][j - 1];
                 } else {
                     dp[i][j] = 1 + Math.min(
-                        dp[i][j - 1],               // Insert
+                        dp[i][j - 1],              
                         Math.min(
-                            dp[i - 1][j],           // Delete
-                            dp[i - 1][j - 1]        // Replace
+                            dp[i - 1][j],          
+                            dp[i - 1][j - 1]     
                         )
                     );
                 }
